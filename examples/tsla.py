@@ -1,6 +1,6 @@
 import yfinance as yf
 
-from utils.history.enhance_ticker_history import enhance_ticker_history
+from fuhnance.utils.history.enhance_ticker_history import enhance_ticker_history
 
 def main():
     tesla = yf.Ticker("TSLA")
