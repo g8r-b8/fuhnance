@@ -27,7 +27,4 @@ def enhance_ticker_history(df):
     df = add_log_ret(df)
     df = add_deviations(df, 'change')
     df = add_deviations(df, 'log_ret')
-    print(df[df['log_ret_dev']<1].shape[0]/df.shape[0])
-    print(df[df['log_ret_dev']<2].shape[0]/df.shape[0])
-    print(df[df['log_ret_dev']<3].shape[0]/df.shape[0])
     return df
