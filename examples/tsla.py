@@ -18,6 +18,7 @@ def gen_options(ticker_obj, ticker):
         chain = ticker_obj.option_chain(expiration_date)
         chain = enhance_option_chain(chain, last_price)
         chain['expiry'] = expiration_date
+        chain['expiry'] = pd.to_datetime(chain['expiry'])
         master = pd.concat([master, chain], axis=0)
     plot_vol(master)
 

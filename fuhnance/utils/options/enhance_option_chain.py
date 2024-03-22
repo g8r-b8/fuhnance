@@ -15,4 +15,6 @@ def enhance_option_chain(chain, last_price):
     calls['contract_type'] = 'calls'
     puts['contract_type'] = 'puts'
     df = pd.concat([calls, puts], axis=0)
+    df['underlying_price'] = last_price
+    # master[master['movement_needed']>0].query('inTheMoney == False').sort_values('movement_needed')
     return df
