@@ -39,20 +39,6 @@ class TestStrategy(bt.Strategy):
 
 
     def next(self):
-        '''
-        if not self.position:
-            if self.t > 10:
-                datas_results = []
-                for i, e in enumerate(self.datas):
-                    open = e.open.get(ago=0, size=self.t+1)
-                    close = e.close.get(ago=0, size=self.t+1)
-                    percent_returns = np.divide(np.subtract(close, open), open)
-                    datas_results.append(percent_returns)
-                datas_results = np.column_stack(datas_results)
-                weights, _, _ = markowitz_optimal_portfolio(datas_results)
-                self.rebalance_portfolio(weights)
-                breakpoint()
-        '''
         datas_results_list = []
         if self.t > 5:
             for i, e in enumerate(self.datas):
