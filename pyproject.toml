@@ -6,9 +6,13 @@ authors = ["Wingate Jones <wingate.jones@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 yfinance = "^0.2.37"
 plotly = "^5.20.0"
+matplotlib = "^3.8.3"
+cvxopt = "^1.3.2"
+yahoofinance = "^0.0.2"
+backtrader = "^1.9.78.123"
 
 
 [build-system]
