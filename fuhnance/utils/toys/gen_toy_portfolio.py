@@ -22,9 +22,14 @@ def gen_seasonality(n):
     signal = np.sin(2 * np.pi * samples)
     return signal
 
+def gen_multiplicative_seasonality(n):
+    seasonality = gen_seasonality(n) + 1
+    random_ts = np.absolute(gen_toy_returns(1, len(seasonality)))
+    return random_ts * seasonality
+
 def gen_additive_seasonality(n):
-    seasonality = gen_seasonality(n)
-    random_ts = gen_toy_returns(1, len(seasonality))
+    seasonality = gen_seasonality(n) + 1
+    random_ts = np.absolute(gen_toy_returns(1, len(seasonality)))
     return random_ts + seasonality
 
 def gen_toy_portfolio_returns(returns):
