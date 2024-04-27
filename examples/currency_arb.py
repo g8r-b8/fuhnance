@@ -1,11 +1,17 @@
 import fuhnance.utils.api.kraken.get_asset_info as kraken
 import fuhnance.utils.api.lykke.get_asset_info as lykke 
+import fuhnance.utils.api.binance.get_asset_info as binance
 
 def main():
+    '''
     kraken_btc = kraken.get_current_price('XBTUSD')
     lykke_btc = lykke.get_current_price('BTCUSD')
     print(compare_prices(kraken_btc, lykke_btc))
+    '''
+    kraken_btc = kraken.get_current_price('LTCXBT')
+    binance_btc = binance.get_current_price('LTCBTC')
     breakpoint()
+    print(compare_prices(kraken_btc, binance_btc))
 
 def compare_prices(exchange_a, exchange_b):
     results = []
