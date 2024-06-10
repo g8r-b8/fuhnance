@@ -34,10 +34,16 @@ class Kraken(Exchange):
     def __init__(self):
         pass
 
+    def get_price(self, pair):
+        return kraken.get_current_price(pair)
+
 class Binance(Exchange):
 
     def __init__(self):
         pass
+
+    def get_price(self, pair):
+        return binance.get_current_price(pair)
 
 
 def main():
